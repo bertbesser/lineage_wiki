@@ -79,4 +79,5 @@ heimdall flash --{{ device.recovery_partition_name | upcase }} {{ device.recover
 6. Manually reboot into recovery, this may require pulling the device's battery out and putting it back in, or if you have a non-removable battery, press the Volume Down + Power buttons for 8~10 seconds until the screen turns black & release the buttons *immediately* when it does, then boot to recovery:
     * {{ device.recovery_boot }}
     {% include alerts/note.html content="Be sure to reboot into recovery immediately after installing the custom recovery. If you don't the stock ROM will overwrite the custom recovery with the stock recovery, and you'll need to flash it again." %}
+    {% if device.vendor_short == "samsung" %}{% include alerts/note.html content="One some samsung devices, it might be neccessary to additionally hold the Bixby button to leave download mode." %}{% endif %}
 {%- include snippets/recovery_logo_note.md %}
