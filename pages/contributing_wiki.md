@@ -50,6 +50,7 @@ git config --global user.email "youremail@example.com"
 ```
 git clone https://github.com/LineageOS/lineage_wiki ~/lineage_wiki
 cd ~/lineage_wiki
+mkdir -p .git/hooks
 curl -Lo .git/hooks/commit-msg https://review.lineageos.org/tools/hooks/commit-msg
 chmod +x .git/hooks/commit-msg
 ```
