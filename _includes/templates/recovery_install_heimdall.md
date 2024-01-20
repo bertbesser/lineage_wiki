@@ -16,6 +16,7 @@ The preferred method of installing a custom recovery is through Download Mode{% 
 {% unless device.no_oem_unlock_switch %}
 1. Enable Developer Options by pressing the "Build Number" option in the "Settings" app within the "About" menu
  * From within the Developer options menu, enable OEM unlock.
+{% include alerts/note.html content="On some devices, to complete the OEM unlock, the device might automatically reboot, and an internet connection must be established after reboot. Verify that OEM unlock is enabled by visiting the Developer options menu again and checking that the option is visible and indicates that it is enable." %}
 {% endunless %}
 2. Download and install the appropriate version of the [Heimdall suite](https://www.androidfilehost.com/?w=files&flid=304516) for your machine's OS
     * **Windows**: Extract the Heimdall suite zip and take note of the new directory containing `heimdall.exe`. You can verify Heimdall is functioning by opening a Command Prompt or PowerShell in that directory and running `heimdall version`.
